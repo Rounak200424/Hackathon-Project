@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document Formats</title>
+    <link rel="stylesheet" href="document.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="color: white;" >Legal Document Formats</h1>
+        <p style="color: white;">Select a document format below to view and download.</p>
+
+        <div class="document-list">
+            <div class="document-item">
+                <h3>Rental Agreement</h3>
+                <p>A legally binding agreement between a landlord and tenant.</p>
+                <button onclick="downloadPDF('rental_agreement.pdf')">Download PDF</button>
+            </div>
+
+            <div class="document-item">
+                <h3>Non-Disclosure Agreement (NDA)</h3>
+                <p>A contract that protects confidential information.</p>
+                <button onclick="downloadPDF('nda_template.pdf')">Download PDF</button>
+            </div>
+
+            <div class="document-item">
+                <h3>Affidavit</h3>
+                <p>A sworn statement used for legal purposes.</p>
+                <button onclick="downloadPDF('affidavit.pdf')">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="project1.js"></script>
+
+</body>
+</html>

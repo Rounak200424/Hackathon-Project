@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalHub - Empowering Legal Knowledge</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #333333); /* Dark background gradient */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #222222;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #ffffff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+        }
+
+        .feature {
+            background-color: #2a2a2a;
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 250px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none; /* Remove default underline from anchor */
+            color: inherit; /* Inherit text color from parent */
+            display: block; /* Make anchor behave like a block element */
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            background-color: #333333;
+        }
+
+        .feature h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            color: #cccccc;
+        }
+
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LegalHub</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>WE MAKE LEGAL KNOWLEDGE ACCESSIBLE, SIMPLIFY COMPLEX LAWS, AND EMPOWER INDIVIDUALS WITH THE RIGHT LEGAL TOOLS TO PROTECT THEIR RIGHTS AND MAKE INFORMED DECISIONS.</h1>
+        <p>Justice begins with knowledge. Empower yourself today.</p>
+        <img src="placeholder-image.jpg" alt="Abstract Legal Image"> </section>
+
+    <section class="features">
+        <a href="project.html" class="feature">
+            <h3>DICTIONARY</h3>
+            <p>Find definitions of legal terms.</p>
+        </a>
+        <a href="project1.html" class="feature">
+            <h3>DOCUMENT GENERATOR</h3>
+            <p>Create legal documents easily.</p>
+        </a>
+        <a href="#" class="feature">
+            <h3>ARTICLES AND GUIDE</h3>
+            <p>Learn about legal topics.</p>
+        </a>
+        <a href="project2.html" class="feature">
+            <h3>FUNDAMENTAL RIGHTS</h3>
+            <p>Understand your rights.</p>
+        </a>
+        <a href="#" class="feature">
+            <h3>COMMUNITY FORUM</h3>
+            <p>Discuss legal issues.</p>
+        </a>
+        <a href="hello.html" class="feature">
+            <h3>Connect</h3>
+            <p>Connect with our attorney</p>
+        </a>
+        <a href="#" class="feature">
+            <h3>REGISTER</h3>
+            <p>Create an account.</p>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LegalHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

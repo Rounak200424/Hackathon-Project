@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 20px 20px; 
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 5px 5px; 
+        }
+        nav .logo {
+            font-size: 1.5em; 
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0; 
+            margin: 0; 
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #9c27b0;
+        }
+        .hero {
+            padding: 50px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards;
+        }
+        .hero h1 {
+            font-size: 2em;
+        }
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .hero .subtext {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .buttons a, .follow-us a {
+            background: #7b1fa2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .buttons a:hover, .follow-us a:hover {
+            background: #9c27b0;
+            transform: scale(1.1);
+        }
+        .our-team .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .our-team .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .our-team .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .follow-us {
+            margin-top: 30px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .about {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .quick-links{
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LegalHub</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>We make legal knowledge accessible</h1>
+        <p>We make legal knowledge accessible, simplify complex laws, and empower individuals with the right legal tools to protect their rights and make informed decisions.</p>
+        <p class="subtext">Justice begins with knowledge. Empower yourself today.</p>
+    </section>
+
+    <section class="quick-links">
+        <h2>Simplifying Legal Jargon, One Step at a Time</h2>
+        
+        <div class="buttons">
+            <a href="dictionary.html">Dictionary</a>
+            <a href="document.html">Document Download</a>
+            <a href="articles.html">Articles and Guide</a>
+            <a href="fundamental.html">Fundamental Rights</a>
+            <a href="Qna.html">Q&A</a>
+            <a href="lawyer.html">Connect with a lawyer</a>
+            <a href="#">User Profile</a>
+        </div>
+    </section>
+
+    <section class="our-team">
+        <h2>Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="./WhatsApp Image 2025-03-18 at 5.25.16 PM.jpeg" alt="Member 1">
+                Member 1
+            </div>
+            <div class="team-member">
+                <img src="./WhatsApp Image 2025-03-18 at 5.26.12 PM.jpeg" alt="Member 2">
+                Member 2
+            </div>
+            <div class="team-member">
+                <img src="./WhatsApp Image 2025-03-18 at 5.25.00 PM.jpeg" alt="Member 3">
+                Member 3
+            </div>
+            <div class="team-member">
+                <img src="./WhatsApp Image 2025-03-18 at 5.24.43 PM.jpeg" alt="Member 4">
+                Member 4
+            </div>
+            <div class="team-member">
+                <img src="./WhatsApp Image 2025-03-18 at 5.24.30 PM.jpeg" alt="Member 5">
+                Member 5
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About</h2>
+        <p>We are a passionate team of five enthusiastic students dedicated to making legal knowledge accessible to everyone. With diverse backgrounds in law, technology, and research, we collaborate to bridge the gap between complex legal jargon and everyday understanding. Our goal is to empower individuals with the right tools and information to navigate legal matters confidently.</p>
+        <p>LegalHub is a comprehensive platform designed to simplify legal concepts, provide essential legal documents, and educate users about their rights. From an easy-to-use legal dictionary to step-by-step document generation and expert legal insights, we strive to make legal resources more accessible and user-friendly. Our mission is to ensure that legal awareness is no longer a privilege but a right for all.</p>
+    </section>
+
+    <section class="follow-us">
+        <a href="#">Follow us on Twitter</a>
+        <a href="#">Follow us on Discord</a>
+    </section>
+</body>
+</html>

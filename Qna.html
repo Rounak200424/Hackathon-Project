@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalHub - Q&A</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 70%; /* Reduced width for better readability */
+            margin: 30px auto; /* Increased margin for spacing */
+            padding: 30px; /* Increased padding */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+        }
+
+        h1, h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #question-form {
+            margin-bottom: 30px;
+        }
+
+        #question-form textarea {
+            width: 98%; /* Adjusted width */
+            padding: 15px; /* Increased padding */
+            margin-bottom: 15px;
+            border: 1px solid #555; /* Darker border */
+            border-radius: 8px; /* More rounded corners */
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px; /* Increased font size */
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        #question-form button {
+            background: #7b1fa2;
+            color: white;
+            padding: 12px 25px; /* Adjusted padding */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s; /* Added transform transition */
+            font-size: 16px;
+        }
+
+        #question-form button:hover {
+            background: #9c27b0;
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .question {
+            border-bottom: 1px solid #555; /* Darker border */
+            padding: 15px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .answer {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .answer-input {
+            width: 95%; /* Adjusted width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+        }
+
+        .answer-button {
+            background: #7b1fa2;
+            color: white;
+            padding: 8px 18px; /* Adjusted padding */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .answer-button:hover {
+            background: #9c27b0;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LegalHub Q&A</h1>
+
+        <div id="question-form">
+            <h2 >Ask Your Question</h2>
+            <textarea id="question-text" placeholder="Type your legal question here..."></textarea><br>
+            <button onclick="addQuestion()">Submit Question</button>
+        </div>
+
+        <div id="questions-container">
+            <h2>Recently Asked Questions</h2>
+            <div class="question">
+                <strong>What are my fundamental rights?</strong>
+                <div class="answer">
+                    Your fundamental rights are enshrined in the constitution and include rights such as freedom of speech, right to equality, etc.
+                </div>
+                <input type="text" class="answer-input" placeholder="Add your answer">
+                <button class="answer-button">Add Answer</button>
+
+            </div>
+            <div class="question">
+                <strong>How do I file a legal document?</strong>
+                <div class="answer">
+                    Filing a legal document typically involves preparing the document, submitting it to the relevant court or authority, and paying any required fees.
+                </div>
+                <input type="text" class="answer-input" placeholder="Add your answer">
+                <button class="answer-button">Add Answer</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function addQuestion() {
+            const questionText = document.getElementById('question-text').value;
+            if (questionText.trim() === '') return;
+
+            const questionsContainer = document.getElementById('questions-container');
+            const newQuestion = document.createElement('div');
+            newQuestion.className = 'question';
+            newQuestion.innerHTML = `
+                <strong>${questionText}</strong>
+                <div class="answer"></div>
+                <input type="text" class="answer-input" placeholder="Add your answer">
+                <button class="answer-button">Add Answer</button>
+            `;
+            questionsContainer.appendChild(newQuestion);
+            document.getElementById('question-text').value = '';
+        }
+    </script>
+</body>
+</html>

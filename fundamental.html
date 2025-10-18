@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Rights</title>
+    <link rel="stylesheet" href="fundamental.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fundamental Rights</h1>
+        <p>Explore different fundamental rights granted to individuals.</p>
+
+        <!-- Search & Filter Section -->
+        <div class="search-filter-box">
+            <input type="text" id="searchInput" placeholder="Search Rights...">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="Equality">Equality</option>
+                <option value="Freedom">Freedom</option>
+                <option value="Education">Education</option>
+                <option value="Justice">Justice</option>
+                <option value="Constitutional Remedies">Constitutional Remedies</option>
+            </select>
+            <button onclick="searchRights()">Search</button>
+        </div>
+
+        <!-- Rights List -->
+        <div class="rights-list" id="rightsContainer"></div>
+
+        <!-- Recommended Rights Section -->
+        <h2 style="color: white;">Commonly Searched</h2>
+        <div class="recommendations" id="recommendations">
+            <button onclick="fetchRight('Right to Equality')">Right to Equality</button>
+            <button onclick="fetchRight('Right to Freedom')">Right to Freedom</button>
+            <button onclick="fetchRight('Right to Education')">Right to Education</button>
+            <button onclick="fetchRight('Right Against Exploitation')">Right Against Exploitation</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
